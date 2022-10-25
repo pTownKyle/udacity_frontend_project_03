@@ -37,12 +37,13 @@ const writeJournalEntry = async () => {
             feelings: feelings,
             temp: temp,
         }),
+    }).then(() => {
+        // Get App Data
+        getAppData();
     });
-
-    // Get App Data
-    getAppData();
 };
 
+// Get Generate Button
 const generateButton = document.getElementById('generate');
 
 generateButton.addEventListener('click', (e) => {

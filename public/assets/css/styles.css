@@ -1,0 +1,111 @@
+@import './normalize.css';
+@import './variables.css';
+@import url(https://fonts.googleapis.com/css?family=Fauna+One|Cinzel);
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    background-color: var(--color-primary);
+    font-family: 'Fauna One', serif;
+}
+
+#app {
+    display: grid;
+
+    place-content: center;
+    padding: 1rem;
+    background-color: var(--color-secondary);
+    border-radius: 3%;
+}
+
+h1,
+label {
+    font-family: 'Cinzel', serif;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+#journal_entry {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.form_group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
+.form_group label {
+    font-size: 1.8rem;
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+.form_group input {
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 3%;
+    border: none;
+}
+
+.form_group textarea {
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 3%;
+    border: none;
+    height: 10ch;
+}
+
+#generate {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 3%;
+    border: none;
+    background-color: var(--color-tertiary);
+    cursor: pointer;
+}
+
+#date,
+#temp,
+#content {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+    #app {
+        width: 75vw;
+        height: 75vh;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    .form_group label {
+        font-size: 2.5rem;
+    }
+
+    .form_group input,
+    .form_group textarea {
+        font-size: 2rem;
+    }
+
+    #generate {
+        font-size: 2.5rem;
+    }
+}

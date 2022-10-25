@@ -63,12 +63,14 @@ const getAppData = async () => {
         const uiTemp = document.getElementById('temp');
         const uiContent = document.getElementById('content');
         const zip = document.getElementById('zip');
+        const feelings = document.getElementById('feelings');
 
         // Update UI & Clear Input Fields
-        uiDate.innerHTML = data.date; // Update Date
-        uiTemp.innerHTML = data.temp; // Update Temperature
-        uiContent.innerHTML = data.feelings; // Update Content (Feelings)
+        uiDate.innerHTML = `Date: ${data.date}`; // Update Date
+        uiTemp.innerHTML = `Temp: ${Math.floor(data.temp)} degrees`; // Update Temperature
+        uiContent.innerHTML = `Feelings: </br>${data.feelings}`; // Update Content (Feelings)
         zip.value = ''; // Clear Zip Code Input
+        feelings.value = ''; // Clear Feelings Input
     } catch (error) {
         console.log(`getAppData Error: ${error}`);
     }

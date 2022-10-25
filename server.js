@@ -31,6 +31,7 @@ app.post('/data', (req, res) => {
     projectData.temp = data.temp;
     projectData.date = data.date;
     projectData.feelings = data.feelings;
+    res.end();
 });
 
 // Express listen on port 3000

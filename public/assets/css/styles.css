@@ -108,4 +108,10 @@ h1 {
     #generate {
         font-size: 2.5rem;
     }
+
+    #date,
+    #temp,
+    #content {
+        font-size: 2rem;
+    }
 }

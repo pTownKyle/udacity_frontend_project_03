@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Weather Journal</title>
+    </head>
+    <body>
+        <div id="app">
+            <h1>Welcome to Weather Journal</h1>
+            <p>
+                Please enter your city zip code & jot down how you're feeling…
+            </p>
+
+            <form id="journal_entry">
+                <label for="zip">City</label>
+                <input
+                    type="text"
+                    id="zip"
+                    name="zip"
+                    placeholder="Enter Zip Code Here"
+                    required
+                />
+
+                <label for="feelings">How are you feeling?</label>
+                <textarea name="feelings" id="feelings" required></textarea>
+
+                <button id="generate">Add Journal Entry</button>
+            </form>
+
+            <div id="entry_holder">
+                <div id="date">Date</div>
+                <div id="temp">Temp</div>
+                <div id="content">Content</div>
+            </div>
+        </div>
+
+        <script src="./assets/js/app.js"></script>
+    </body>
+</html>

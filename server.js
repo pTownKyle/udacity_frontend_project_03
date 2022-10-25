@@ -1,11 +1,9 @@
-// Get Environment Variables, Setup Weather API Key & Project Data
-require('dotenv').config();
-const api_key = process.env.WEATHER_API_KEY;
-const projectData = {};
-
 // Get Dependencies
 const express = require('express');
 const cors = require('cors');
+
+// Setup Project Data
+const projectData = {};
 
 // Initialize Express
 const app = express();
@@ -24,7 +22,7 @@ app.use(express.static('public'));
 
 // Get Data Route
 app.get('/data', (req, res) => {
-    res.send(projectData);
+    res.json(projectData);
 });
 
 // Post Data Route
@@ -32,7 +30,7 @@ app.post('/data', (req, res) => {
     let data = req.body;
     projectData.temp = data.temp;
     projectData.date = data.date;
-    projectData.userResponse = data.userResponse;
+    projectData.feelings = data.feelings;
 });
 
 // Express listen on port 3000

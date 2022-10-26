@@ -77,6 +77,14 @@ h1 {
     cursor: pointer;
 }
 
+#entry_holder {
+    color: var(--color-tertiary);
+    background-color: var(--color-primary);
+    padding: 1rem 0;
+
+    transition: opacity 0.5s ease;
+}
+
 #date,
 #temp,
 #content {
@@ -85,11 +93,16 @@ h1 {
     margin-bottom: 1rem;
 }
 
+.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
 /* Tablet Styles */
 @media (min-width: 768px) {
     #app {
-        width: 75vw;
-        height: 75vh;
+        width: 65vw;
+        height: 85vh;
     }
 
     h1 {

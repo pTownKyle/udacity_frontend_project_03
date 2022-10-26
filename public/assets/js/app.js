@@ -60,6 +60,7 @@ const getAppData = async () => {
         const data = await appData.json();
 
         // Get UI Elements
+        const entryHolder = document.getElementById('entry_holder');
         const uiDate = document.getElementById('date');
         const uiTemp = document.getElementById('temp');
         const uiContent = document.getElementById('content');
@@ -67,6 +68,7 @@ const getAppData = async () => {
         const feelings = document.getElementById('feelings');
 
         // Update UI & Clear Input Fields
+        entryHolder.classList.remove('hide');
         uiDate.innerHTML = `Date: ${data.date}`; // Update Date
         uiTemp.innerHTML = `Temp: ${Math.floor(data.temp)} degrees`; // Update Temperature
         uiContent.innerHTML = `Feelings: </br>${data.feelings}`; // Update Content (Feelings)
